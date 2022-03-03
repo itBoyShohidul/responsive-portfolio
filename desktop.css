@@ -1,0 +1,16 @@
+/* This is style for desktop */
+
+.nav-link ul>li{
+    background: transparent;
+}
+
+.about-me-img{
+    margin-top: 100px;
+}
+.sub-footer{
+    padding: 30px 150px;
+
+}
+.social-icon a i{
+    font-size: 2rem;
+}

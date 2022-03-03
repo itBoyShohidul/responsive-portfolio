@@ -1,0 +1,347 @@
+/* This syle is for mobile devices */
+
+/* ------------------------------
+    ----- Basic --------
+------------------------------ */
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    /* font-family: 'Roboto', sans-serif;
+    font-family: 'Satisfy', cursive; */
+    /* scroll-behavior: ; */
+}
+.row{
+    display: flex;
+}
+.col-1{
+    width: 8.33%;
+}
+.col-2{
+    width: 16.66%;
+}
+.col-3{
+    width: 25%;
+}
+.col-4{
+    width: 33.33%;
+}
+.col-5{
+    width: 41.66%;
+}
+.col-6{
+    width: 50%;
+}
+.col-7{
+    width: 58.33%;
+}
+.col-8{
+    width: 66.66%;
+}
+.col-9{
+    width: 75%;
+}
+.col-10{
+    width: 83.33%;
+}
+.col-11{
+    width: 91.66;
+}
+.col-12{
+    width: 100%;
+}
+@media screen and (max-width:600px){
+    [class*="col-"]{
+        width: 100%;
+    }
+    .row{
+        flex-direction: column;
+    }
+}
+/* ------------------------------
+    ----- Nav Bar --------
+------------------------------ */
+.nav-bar{
+    background-color: teal;
+    color: #fff;   
+}
+.logo img{
+    height: 100px;
+    width: 100px;  
+    transition: transform 10s;  
+    border: 3px solid #fff;
+    border-radius: 50%;
+}
+.logo img:hover{
+    transform: rotate(36000deg);
+}
+.logo{
+    text-align: center;
+    padding: 10px;
+}
+.nav-head{
+    text-align: center;
+    margin: 25px 0;
+    font-size: 1.5rem;
+}
+.nav-link{
+    padding: 20px 0;
+}
+.nav-link ul{
+    display: flex;
+    text-align: center;
+}
+.nav-link ul>li{
+    list-style: none; 
+    margin: 5px 5px; 
+    background-color: rgb(2, 70, 70); 
+    padding: 10px; 
+    border-radius: 10px;
+}
+.nav-link ul>li>a:hover{
+    color: tomato;
+}
+.nav-link ul>li>a{
+    color:#fff;    
+    text-decoration: none;
+    font-size: 1.2rem;
+
+}
+/* ------------------------------
+    ----- Second Section --------
+------------------------------ */
+.second{
+    color: teal;
+    background-color: rgb(230, 228, 228);
+}
+.icon1{
+    text-align: right;
+    padding: 20px 40px;
+}
+.fa-fire{
+    text-align: center;
+    font-size: 7rem;
+}
+.sec-head{
+    font-family: 'Satisfy', cursive;
+    text-align: center;
+    font-size: 2.5rem;
+    padding: 0 10px;
+}
+.sec-head p{
+    font-size: 1.2rem;
+    color: gray;
+}
+.icon2{
+    padding: 20px 40px;
+}
+/* ------------------------------
+    ----- About Me --------
+------------------------------ */
+.about-me{
+    padding: 30px 0;
+    background-color: teal;
+    color: #fff;
+}
+.about-me-img{
+    text-align: center;
+}
+.about-me img{
+    height: 250px;
+    width: 250px;  
+    border: 3px solid white;
+    border-radius: 50%;  
+}
+.about-me-desc>p{
+    margin: 10px 0;
+    padding: 10px;
+}
+.about-me-desc>hr{
+    margin: 10px 0;
+}
+.about-me-desc>p>a{
+    color: #fff;
+    text-decoration: none;
+}
+.btn{
+    background-color: rgb(2, 70, 70);
+    color: #fff; 
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+/* ------------------------------
+---- Professional Section --
+------------------------------ */
+.professional{
+    padding: 30px 50px;
+    background-color: rgb(2, 70, 70);
+
+}
+.card-container{
+    background-color: teal;
+    color:#fff;
+    border-radius: 10px;
+    margin: 10px;
+}
+.card-container>ol>li{
+    list-style: none;
+}
+.img{
+    text-align: center;
+    padding: 15px;
+    
+}
+.img img{
+    height: 100px;
+    width: 100px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+.card-container h3{
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(2, 70, 70);
+    border-radius: 15px;
+}
+.card-container h4,p{
+    padding: 10px;
+}
+.skill>li{
+    list-style: none;
+    margin: 50px 10px;
+    position: relative;    
+}
+.skill li::before{
+    content: '';
+    background-color: #fff;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    height: 30px;
+    width: 100%;
+    border-radius: 50px;
+}
+.skill li::after{
+    content: '';
+    background-color: yellowgreen;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    height: 30px;
+    width: 0%;
+    border-radius: 50px;
+    animation-duration: 4s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+.skill li.html::after{
+    animation-name: html;
+}
+@keyframes html{
+    to{
+        width: 95%;
+    }
+}
+.skill li.css::after{
+    animation-name: css;
+}
+@keyframes css{
+    to{
+        width: 85%;
+        background-color: red;
+    }
+}
+.skill li.js::after{
+    animation-name: js;
+}
+@keyframes js{
+    to{
+        width: 80%;
+        background-color: yellow;
+    }
+}
+.skill li.wordpress::after{
+    animation-name: wordpress;
+}
+@keyframes wordpress{
+    to{
+        width: 90%;
+        background-color: cyan;
+    }
+}
+/* ------------------------------
+---- Footer Section --
+------------------------------ */
+.sub-footer{
+    padding: 30px 50px;
+    background-color: rgb(2, 70, 70);
+    color: #fff;
+}
+.ach-container,.contact,.social{
+    padding: 5px;
+}
+.ach-container ol li{
+    list-style-position: inside;
+    margin: 15px 0;
+    letter-spacing: 1px;
+}
+.ach-container h3,.contact h3{
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: solid;
+}
+.form>input,textarea{
+    width: 100%;
+    margin: 10px 0;
+    padding: 5px;
+    text-align: center;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    border: none;
+}
+.btn2{
+    background-color: teal;
+    color: #fff; 
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+.btn2:hover{
+    cursor: pointer;
+    background-color: rgba(0, 128, 128, 0.411)
+}
+
+.social-icon{
+    text-align: center;
+    background-color: teal;
+}
+
+.social-icon a i{
+    margin: 10px;
+    color: #fff;
+    font-size: 1rem;
+    border: 1px solid #fff;
+    border-radius: 100px;
+    padding: 7px;
+}
+.social-icon a i:hover{
+    color: rgba(0, 0, 0, 0.486);
+    transition: 1s;
+    border: none;
+}
+footer{
+    text-align: center;
+    background-color: teal;
+    font-weight: 550;
+    color: #fff;
+}
